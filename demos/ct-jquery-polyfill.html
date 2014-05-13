@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Demo: ct-jquery-polyfill</title>
+        <meta charset="utf-8" />
+        <!--[if lt IE 9]>
+        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="../bower_components/html5shiv/dist/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <style>
+            .nth-child-1:after {
+                content: " (.nth-child-1)";
+                color: green;
+            }
+            .nth-child-2:after {
+                content: " (.nth-child-2)";
+                color: green;
+            }
+            .nth-child-3:after {
+                content: " (.nth-child-3)";
+                color: green;
+            }
+            .nth-child-4:after {
+                content: " (.nth-child-4)";
+                color: green;
+            }
+            .nth-child-5:after {
+                content: " (.nth-child-5)";
+                color: green;
+            }
+            .last-child:after {
+                content: " (.last-child)";
+                color: green;
+            }
+            .checked {
+                color: green;
+                border: 1px solid green;
+            }
+            .green {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Demo: ct-jquery-polyfill</h1>
+        <p>Polyfilled items are marked in <strong class="green">green</strong>.
+        <div class="polyfill">
+            <h2><code>:last-child</code> and <code>:nth-child</code></h2>
+            <ul class="l-custom">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+            </ul>
+            <h2><code>:checked</code></h2>
+            <ul>
+                <li>
+                    <input type="radio" />
+                </li>
+                <li>
+                    <input type="radio" checked />
+                </li>
+                <li>
+                    <input type="checkbox" />
+                </li>
+                <li>
+                    <input type="checkbox" checked />
+                </li>
+            </ul>
+        </div>
+        <!-- /.polyfill -->
+        <script src="../bower_components/jquery/jquery.min.js"></script>
+        <script src="../bower_components/jquery/jquery-migrate.min.js"></script>
+        <script src="../dist/tests/ct-jquery-supports.js"></script>
+        <script src="../dist/tests/modernizr.printshiv-addtest-teststyles-css_lastchild-load.js"></script>
+        <script src="../bower_components/platform.js/platform.js"></script>
+        <script>
+            CT_SUPPORTS.polyfills_path = '../bower_components/';
+            CT_SUPPORTS.tests_path = '../dist/tests/';
+        </script>
+        <script src="../dist/ct-jquery-polyfill.js"></script>
+    </body>
+</html>

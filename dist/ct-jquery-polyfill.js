@@ -17,8 +17,7 @@
 
     $(document).ready( function() {
 
-        var polyfills_path = '/resources/build/vendor/',
-            nonModernizr = {}; // object for storing our own tests
+        var nonModernizr = {}; // object for storing our own tests
 
         // :CHECKED
         // input:checked -> input.checked, label[for="foo"].checked
@@ -38,7 +37,7 @@
 
         Modernizr.load({
             test: Modernizr.checked,
-            nope: ( polyfills_path + 'checked-polyfill/checked-polyfill.min.js' ),
+            nope: ( CT_SUPPORTS.polyfills_path + 'checked-polyfill/checked-polyfill.min.js' ),
             callback: function () {
                 // Modernizr docs use 'complete'
                 // but YepNope's 'callback' works much better
@@ -57,7 +56,7 @@
 
         Modernizr.load({
             test: Modernizr.lastchild,
-            nope: ( polyfills_path + 'ct-jquery-polyfill/dist/tests/ct-jquery-last-child.js' )
+            nope: ( CT_SUPPORTS.tests_path + 'ct-jquery-last-child.js' )
         });
 
         // :NTH-CHILD
@@ -65,7 +64,7 @@
 
         Modernizr.load({
             test: CT_SUPPORTS.nthchild(),
-            nope: ( polyfills_path + 'ct-jquery-polyfill/dist/tests/ct-jquery-nth-child.js' )
+            nope: ( CT_SUPPORTS.tests_path + 'ct-jquery-nth-child.js' )
         });
 
         // Debugging tests
