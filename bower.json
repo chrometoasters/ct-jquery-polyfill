@@ -1,0 +1,24 @@
+{
+  "name": "ct-jquery-polyfill",
+  "version": "1.0.0",
+  "homepage": "https://github.com/chrometoasters/ct-jquery-polyfill",
+  "authors": [
+    "dotherightthing <dan.smith@chrometoaster.com>"
+  ],
+  "description": "A pattern for loading polyfills",
+  "main": "README.md",
+  "license": "All rights reserved",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "checked-polyfill": "https://github.com/rdebeasi/checked-polyfill.git#1.5",
+    "ct-jquery-last-child": "https://github.com/chrometoasters/ct-jquery-last-child.git#v1.0.0",
+    "ct-jquery-nth-child": "https://github.com/chrometoasters/ct-jquery-nth-child.git#v1.0.0",
+    "platform.js": "https://github.com/bestiejs/platform.js.git#v1.0.0"
+  }
+}
