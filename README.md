@@ -27,6 +27,8 @@ Ensure that the following dependencies are loaded by your page / via Grunt:
 1. `ct-jquery-polyfill/dist/tests/modernizr.printshiv-addtest-teststyles-css_lastchild-load.js` (bundled)
 1. `ct-jquery-polyfill/dist/tests/ct-jquery-supports.js` (bundled)
 1. `platform.js/platform.js` (via Bower)
+1. `<script>CT_SUPPORTS.polyfills_path = '../bower_components/';</script>`
+1. `<script>CT_SUPPORTS.tests_path = '../dist/tests/';</script>`
 1. `ct-jquery-polyfill/dist/ct-jquery-polyfill.js` (bundled)
 
 **Note:** The following dependencies are loaded via `ct-jquery-polyfill.js` and therefore should not be loaded manually:
