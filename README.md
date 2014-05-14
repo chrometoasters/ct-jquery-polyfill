@@ -24,15 +24,13 @@ Ensure that the following dependencies are loaded by your page / via Grunt:
 
 #### Bottom of `<body>`:
 
-These variables need to be set in a script block or within your custom JS file:
-
-1. `CT_SUPPORTS.polyfills_path = '../bower_components/';`
-1. `CT_SUPPORTS.tests_path = '../dist/tests/';`
-
 Ensure that the following dependencies are loaded by your page / via Grunt:
 
 1. `ct-jquery-polyfill/dist/tests/modernizr.printshiv-addtest-teststyles-css_lastchild-load.js` (bundled)
 1. `ct-jquery-polyfill/dist/tests/ct-jquery-supports.js` (bundled)
+1. `ct-jquery-supports--config.js`, containing:
+    1. `CT_SUPPORTS.polyfills_path = '../vendor'; // path relative to scripts/custom.js`
+    1. `CT_SUPPORTS.tests_path = '../vendor/ct-jquery-polyfill/dist/tests'; // path relative to scripts/custom.js`
 1. `platform.js/platform.js` (via Bower)
 1. `ct-jquery-polyfill/dist/ct-jquery-polyfill.js` (bundled)
 
