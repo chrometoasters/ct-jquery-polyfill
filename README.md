@@ -13,9 +13,9 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### Dependencies
 
-Ensure that the following dependencies are loaded by your page / via Grunt:
-
 #### `<head>` (IE only):
+
+Ensure that the following dependencies are loaded by your page / via Grunt:
 
 **Note:** The HTML5Shiv is not used by this plugin but is a common polyfill which is required for MSIE6-8.
 
@@ -26,12 +26,10 @@ Ensure that the following dependencies are loaded by your page / via Grunt:
 
 These variables need to be set in a script block or within your custom JS file:
 
-    <script>
-        CT_SUPPORTS.polyfills_path = '../bower_components/';
-        CT_SUPPORTS.tests_path = '../dist/tests/';
-    </script>
+    CT_SUPPORTS.polyfills_path = '../bower_components/';
+    CT_SUPPORTS.tests_path = '../dist/tests/';
 
-And then:
+Ensure that the following dependencies are loaded by your page / via Grunt:
 
 1. `ct-jquery-polyfill/dist/tests/modernizr.printshiv-addtest-teststyles-css_lastchild-load.js` (bundled)
 1. `ct-jquery-polyfill/dist/tests/ct-jquery-supports.js` (bundled)
