@@ -26,8 +26,8 @@ Ensure that the following dependencies are loaded by your page / via Grunt:
 
 These variables need to be set in a script block or within your custom JS file:
 
-    CT_SUPPORTS.polyfills_path = '../bower_components/';
-    CT_SUPPORTS.tests_path = '../dist/tests/';
+1. `CT_SUPPORTS.polyfills_path = '../bower_components/';`
+1. `CT_SUPPORTS.tests_path = '../dist/tests/';`
 
 Ensure that the following dependencies are loaded by your page / via Grunt:
 
