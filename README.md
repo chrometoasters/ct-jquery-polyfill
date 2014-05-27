@@ -55,3 +55,28 @@ Ensure that elements to polyfill are contained within `.l-custom`, which is cont
 #### 3. `:last-child` -> `.last-child`
 
 Ensure that elements to polyfill are contained within `.l-custom`, which is contained within `.polyfill`
+
+### Checking `CT_SUPPORTS` before setting up your UI
+
+    $(document).ready( function() {
+
+        // what: jQuery function which fires when the DOM has finished loading
+        // how: -
+        // note: -
+
+        // dependencies
+        if ( ( typeof UI_NAME !== 'undefined' ) && ( typeof CT_SUPPORTS !== 'undefined' ) ) {
+
+            CT_SUPPORTS.html_hooks();
+
+            UI_NAME.m_utilities_bar_setup_browser_bar('.m-utilities-bar--browser');
+
+            var is_supported = CT_SUPPORTS.supported();
+
+            if ( is_supported ) {
+
+                UI_NAME.init();
+
+            }
+        }
+    });
