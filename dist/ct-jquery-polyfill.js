@@ -17,6 +17,11 @@
 
     $(document).ready( function() {
 
+        if ( typeof CT_VENDOR_PATH === 'undefined' ) {
+            throw new Error('CT_VENDOR_PATH has not been set');
+            return;
+        }
+
         var nonModernizr = {}; // object for storing our own tests
 
         // :CHECKED
@@ -37,7 +42,7 @@
 
         Modernizr.load({
             test: Modernizr.checked,
-            nope: ( CT_SUPPORTS.polyfills_path + 'checked-polyfill/checked-polyfill.min.js' ),
+            nope: ( CT_VENDOR_PATH + 'checked-polyfill/checked-polyfill.min.js' ),
             callback: function () {
                 // Modernizr docs use 'complete'
                 // but YepNope's 'callback' works much better
@@ -56,7 +61,7 @@
 
         Modernizr.load({
             test: Modernizr.lastchild,
-            nope: ( CT_SUPPORTS.tests_path + 'ct-jquery-last-child.js' )
+            nope: ( CT_VENDOR_PATH + 'ct-jquery-last-child/dist/ct-jquery-last-child.min.js' )
         });
 
         // :NTH-CHILD
@@ -64,7 +69,7 @@
 
         Modernizr.load({
             test: CT_SUPPORTS.nthchild(),
-            nope: ( CT_SUPPORTS.tests_path + 'ct-jquery-nth-child.js' )
+            nope: ( CT_VENDOR_PATH + 'ct-jquery-nth-child/dist/ct-jquery-nth-child.min.js' )
         });
 
         // Debugging tests

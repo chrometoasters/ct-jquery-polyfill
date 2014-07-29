@@ -17,14 +17,23 @@ Ensure that the following dependencies are loaded by your page / via Grunt:
 
 #### `<head>` (IE only):
 
-**Note:** The HTML5Shiv is not used by this plugin but is a common polyfill which is required for MSIE6-8.
+**Note:** The HTML5Shiv is not used by this plugin but is a common polyfill which is required for MSIE6-8. We are not loading this plugin via Modernizr.
 
-1. `html5shiv/dist/html5shiv.js` (via Bower)
-1. `html5shiv/dist/html5shiv-printshiv.js` (via Bower)
+1. `html5shiv/dist/html5shiv-printshiv.js` (via Bower; note that this script contains `html5shiv.js`)
 
 #### Bottom of `<body>`:
 
-Note that the `ct-jquery-polyfill` assumes that it, and the polyfills to be loaded, are all placed into the same folder (eg `bower_components`).
+Although polyfills are loaded from a script file, JavaScript paths are relative to the HTML document.
+
+Therefore we must provide a root-relative path to the vendor folder: `CT_VENDOR_PATH`.
+
+Note that the `ct-jquery-polyfill` assumes that it, and the polyfills to be loaded, are all located at the same `CT_VENDOR_PATH`.
+
+        <script>
+            CT_VENDOR_PATH = '/chrometoaster/ct-jquery-polyfill/bower_components/';
+        </script>
+
+And:
 
 1. `platform.js/platform.js` (via Bower)
 1. `ct-jquery-supports/dist/ct-jquery-supports.js` (via Bower)

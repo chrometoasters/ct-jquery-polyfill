@@ -4,7 +4,6 @@
         <title>Demo: ct-jquery-polyfill</title>
         <meta charset="utf-8" />
         <!--[if lt IE 9]>
-        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
         <script src="../bower_components/html5shiv/dist/html5shiv-printshiv.js"></script>
         <![endif]-->
         <style>
@@ -70,6 +69,10 @@
             </ul>
         </div>
         <!-- /.polyfill -->
+        <!-- provide a path for loading polyfills -->
+        <script>
+            CT_VENDOR_PATH = '/chrometoaster/ct-jquery-polyfill/bower_components/';
+        </script>
         <!-- jquery dependencies -->
         <script src="../bower_components/jquery/jquery.min.js"></script>
         <script src="../bower_components/jquery/jquery-migrate.min.js"></script>
