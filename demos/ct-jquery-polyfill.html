@@ -70,15 +70,14 @@
             </ul>
         </div>
         <!-- /.polyfill -->
+        <!-- jquery dependencies -->
         <script src="../bower_components/jquery/jquery.min.js"></script>
         <script src="../bower_components/jquery/jquery-migrate.min.js"></script>
-        <script src="../dist/tests/ct-jquery-supports.js"></script>
-        <script src="../dist/tests/modernizr.printshiv-addtest-teststyles-css_lastchild-load.js"></script>
+        <!-- other dependencies -->
         <script src="../bower_components/platform.js/platform.js"></script>
-        <script>
-            CT_SUPPORTS.polyfills_path = '../bower_components/';
-            CT_SUPPORTS.tests_path = '../dist/tests/';
-        </script>
+        <script src="../bower_components/ct-jquery-supports/dist/ct-jquery-supports.js"></script>
+        <!-- this script -->
+        <script src="../dist/modernizr.custom.js"></script>
         <script src="../dist/ct-jquery-polyfill.js"></script>
     </body>
 </html>
