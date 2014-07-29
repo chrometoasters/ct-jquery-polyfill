@@ -7,7 +7,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Installation + Usage
 
-    bower install https://github.com/chrometoasters/ct-jquery-polyfill#v1.0.0 --save
+    bower install https://github.com/chrometoasters/ct-jquery-polyfill#v1.1.0 --save
 
 ---
 
