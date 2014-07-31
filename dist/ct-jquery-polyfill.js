@@ -19,7 +19,6 @@
 
         if ( typeof CT_VENDOR_PATH === 'undefined' ) {
             throw new Error('CT_VENDOR_PATH has not been set');
-            return;
         }
 
         var nonModernizr = {}; // object for storing our own tests
