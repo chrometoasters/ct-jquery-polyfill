@@ -27,6 +27,8 @@ Therefore we must provide a root-relative path to the vendor folder: `CT_VENDOR_
 
 Note that the `ct-jquery-polyfill` assumes that it, and the polyfills to be loaded, are all located at the same `CT_VENDOR_PATH`.
 
+Don't forget the trailing slash!
+
         <script>
             CT_VENDOR_PATH = '/chrometoaster/ct-jquery-polyfill/bower_components/';
         </script>
