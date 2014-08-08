@@ -71,31 +71,6 @@
             nope: ( CT_VENDOR_PATH + 'ct-jquery-nth-child/dist/ct-jquery-nth-child.min.js' )
         });
 
-        // MATCH MEDIA (for enquire.js)
-        Modernizr.load({
-            test: window.matchMedia,
-            yep: ( CT_VENDOR_PATH + 'enquire/dist/enquire.min.js' ),
-            nope: [
-                ( CT_VENDOR_PATH + 'media-match/media.match.min.js' ),
-                ( CT_VENDOR_PATH + 'enquire/dist/enquire.min.js' )
-            ],
-            complete: function() {
-
-                // Monkey patch:
-                // to allow unmatch (which usually runs on breakpoint transition) to run on DOM load as well
-                // https://github.com/WickyNilliams/enquire.js/issues/86#issuecomment-28665171
-                enquire.registerImmediate = function(query, options) {
-                    options.setup = options.unmatch;
-                    return this.register(query, options);
-                };
-
-                // dependencies
-                //if ( typeof build_ui !== 'undefined' ) {
-                //    build_ui.init();
-                //}
-            }
-        });
-
         // Debugging tests
         // console.log( 'Modernizr.checked', Modernizr.checked );
         // console.log( 'Modernizr.lastchild', Modernizr.lastchild );

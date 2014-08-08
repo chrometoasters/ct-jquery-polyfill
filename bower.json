@@ -1,6 +1,6 @@
 {
   "name": "ct-jquery-polyfill",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "homepage": "https://github.com/chrometoasters/ct-jquery-polyfill",
   "authors": [
     {
@@ -14,8 +14,6 @@
   "dependencies": {
     "jquery": "1.10.1",
     "checked-polyfill": "https://github.com/rdebeasi/checked-polyfill.git#1.5",
-    "enquire": "https://github.com/WickyNilliams/enquire.js.git#2.1.0",
-    "media-match": "https://github.com/weblinc/media-match.git#2.0.2",
     "ct-jquery-last-child": "https://github.com/chrometoasters/ct-jquery-last-child.git#v1.0.1",
     "ct-jquery-nth-child": "https://github.com/chrometoasters/ct-jquery-nth-child.git#v1.0.1",
     "ct-jquery-supports": "https://github.com/chrometoasters/ct-jquery-supports.git#v1.0.1",
