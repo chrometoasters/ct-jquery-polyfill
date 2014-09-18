@@ -47,7 +47,7 @@
                 // but YepNope's 'callback' works much better
                 // in Chrome 31.0.1650.63 (with yep) and IE8 (with nope)
 
-                var $checkable = $('input[type="radio"], input[type="checkbox"]');
+                var $checkable = $('.polyfill--content input[type="radio"], .polyfill--content input[type="checkbox"]');
 
                 if ( $checkable.length ) {
                     $checkable.checkedPolyfill();

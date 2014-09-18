@@ -7,7 +7,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Installation + Usage
 
-    bower install https://github.com/chrometoasters/ct-jquery-polyfill#v1.1.0 --save
+    bower install https://github.com/chrometoasters/ct-jquery-polyfill#~v2 --save
 
 ---
 
@@ -48,19 +48,35 @@ And:
 
 ---
 
+### HTML
+
+    <div class="polyfill">
+        <div class="polyfill--contents">
+            <!-- items to polyfill -->
+        </div>
+    </div>
+
+---
+
+### Demo
+
+    demos/ct-jquery-polyfill.html
+
+---
+
 ### Polyfills
 
 #### 1. `:checked` -> `.checked`
 
-Ensure that elements to polyfill are contained within `.polyfill`
+Ensure that elements to polyfill are contained within `.polyfill .polyfill--content`
 
 #### 2. `:nth-child` -> `.nth-child`
 
-Ensure that elements to polyfill are contained within `.l-custom`, which is contained within `.polyfill`
+Ensure that elements to polyfill are contained within `.l-custom`, which is contained within `.polyfill .polyfill--content`
 
 #### 3. `:last-child` -> `.last-child`
 
-Ensure that elements to polyfill are contained within `.l-custom`, which is contained within `.polyfill`
+Ensure that elements to polyfill are contained within `.l-custom`, which is contained within `.polyfill .polyfill--content`
 
 ---
 
