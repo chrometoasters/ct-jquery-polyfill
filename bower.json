@@ -1,6 +1,6 @@
 {
   "name": "ct-jquery-polyfill",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/chrometoasters/ct-jquery-polyfill",
   "authors": [
     {
@@ -16,7 +16,7 @@
     "checked-polyfill": "https://github.com/rdebeasi/checked-polyfill.git#1.5",
     "ct-jquery-last-child": "https://github.com/chrometoasters/ct-jquery-last-child.git#~v2",
     "ct-jquery-nth-child": "https://github.com/chrometoasters/ct-jquery-nth-child.git#~v2",
-    "ct-jquery-supports": "https://github.com/chrometoasters/ct-jquery-supports.git#v1.0.1",
+    "ct-jquery-supports": "https://github.com/chrometoasters/ct-jquery-supports.git#~v1",
     "html5shiv": "https://github.com/aFarkas/html5shiv.git#3.7.0"
   },
   "private": true,
