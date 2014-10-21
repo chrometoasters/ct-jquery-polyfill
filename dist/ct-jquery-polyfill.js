@@ -21,7 +21,13 @@
             throw new Error('CT_VENDOR_PATH has not been set');
         }
 
-        var nonModernizr = {}; // object for storing our own tests
+        var nonModernizr = {}, // object for storing our own tests
+            $polyfill_root = $('.polyfill'),
+            $polyfill_container = $('.polyfill--content');
+
+        if ( ! $polyfill_root.length || ! $polyfill_container.length ) {
+            throw new Error('Cannot polyfill as .polyfill wrappers are missing');
+        }
 
         // :CHECKED
         // input:checked -> input.checked, label[for="foo"].checked
@@ -47,7 +53,7 @@
                 // but YepNope's 'callback' works much better
                 // in Chrome 31.0.1650.63 (with yep) and IE8 (with nope)
 
-                var $checkable = $('.polyfill--content input[type="radio"], .polyfill--content input[type="checkbox"]');
+                var $checkable = $polyfill_container.find('input[type="radio"], input[type="checkbox"]');
 
                 if ( $checkable.length ) {
                     $checkable.checkedPolyfill();
