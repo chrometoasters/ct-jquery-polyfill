@@ -23,7 +23,7 @@
 
         var nonModernizr = {}, // object for storing our own tests
             $polyfill_root = $('.polyfill'),
-            $polyfill_container = $('.polyfill--content');
+            $polyfill_container = $('.polyfill--contents');
 
         if ( ! $polyfill_root.length || ! $polyfill_container.length ) {
             throw new Error('Cannot polyfill as .polyfill wrappers are missing');
