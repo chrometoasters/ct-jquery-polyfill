@@ -66,7 +66,7 @@
 
         Modernizr.load({
             test: Modernizr.lastchild,
-            nope: ( CT_VENDOR_PATH + 'ct-jquery-last-child/dist/ct-jquery-last-child.min.js' )
+            nope: ( CT_VENDOR_PATH + 'ct-jquery-last-child/dist/ct-jquery-last-child.js' )
         });
 
         // :NTH-CHILD
@@ -74,7 +74,7 @@
 
         Modernizr.load({
             test: CT_SUPPORTS.nthchild(),
-            nope: ( CT_VENDOR_PATH + 'ct-jquery-nth-child/dist/ct-jquery-nth-child.min.js' )
+            nope: ( CT_VENDOR_PATH + 'ct-jquery-nth-child/dist/ct-jquery-nth-child.js' )
         });
 
         // Debugging tests
