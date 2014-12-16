@@ -23,10 +23,13 @@
 
         var nonModernizr = {}, // object for storing our own tests
             $polyfill_root = $('.polyfill'),
-            $polyfill_container = $('.polyfill--contents');
+            $polyfill_container = $('.polyfill--contents'),
+            $polyfill_debug = false;
 
-        if ( ! $polyfill_root.length || ! $polyfill_container.length ) {
-            throw new Error('Cannot polyfill as .polyfill wrappers are missing');
+        if ( $polyfill_debug ) {
+            if ( ! $polyfill_root.length || ! $polyfill_container.length ) {
+                throw new Error('Cannot polyfill as .polyfill wrappers are missing');
+            }
         }
 
         // :CHECKED
