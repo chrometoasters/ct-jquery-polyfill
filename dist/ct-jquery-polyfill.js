@@ -3,7 +3,7 @@
 // This file
 /*jshint browser:true, jquery:true, strict:true, devel:true */
 // globals prevents an error when referencing variables/functions which are concatenated into outward-bound-vendor.combined.js
-/*globals Modernizr:true, CT_SUPPORTS:true, selectorSupported:true */
+/*globals Modernizr:true, CT_SUPPORTS:true, selectorSupported:true, CT_VENDOR_PATH:true */
 
 // if the feature test fails,
 // the JavaScript polyfill is dynamically loaded and executed
